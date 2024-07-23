@@ -1,3 +1,25 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
 
 header{
     position: fixed;
@@ -118,4 +140,19 @@ footer p{
 	justify-content: center;
 	align-items: stretch;
     align-content: center;
+}
+
+
+.grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.grid img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
